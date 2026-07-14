@@ -1,6 +1,22 @@
 (function(){
   var bar = document.getElementById('stickyBar');
   var hero = document.getElementById('top');
+
+  // Lock hero to one measured height on mobile so iOS URL-bar show/hide
+  // cannot resize the section and reflow centered type while scrolling.
+  function lockHeroHeight(){
+    if(!hero) return;
+    if(window.matchMedia('(max-width:768px)').matches){
+      document.documentElement.style.setProperty('--hero-height', window.innerHeight + 'px');
+    } else {
+      document.documentElement.style.removeProperty('--hero-height');
+    }
+  }
+  lockHeroHeight();
+  window.addEventListener('orientationchange', function(){
+    setTimeout(lockHeroHeight, 300);
+  });
+
   if('IntersectionObserver' in window){
     var heroWatcher = new IntersectionObserver(function(entries){
       entries.forEach(function(e){

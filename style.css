@@ -287,10 +287,12 @@ a.eyebrow:hover{opacity:0.75;}
 @media (max-width:768px){
   .hero{
     background-attachment:scroll;
-    /* Stable height — dvh/lvh resize with the iOS chrome and reflow centered type */
-    min-height:calc(100svh + 24px);
-    padding-top:calc(96px + env(safe-area-inset-top, 0px));
-    padding-bottom:calc(48px + env(safe-area-inset-bottom, 0px));
+    /* Pixel-locked via --hero-height in script.js — never follows iOS chrome */
+    height:var(--hero-height, 100svh);
+    min-height:var(--hero-height, 100svh);
+    max-height:var(--hero-height, 100svh);
+    padding-top:calc(88px + env(safe-area-inset-top, 0px));
+    padding-bottom:calc(40px + env(safe-area-inset-bottom, 0px));
   }
 }
 .hero-grid-lines{
