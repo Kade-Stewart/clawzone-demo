@@ -287,10 +287,9 @@ a.eyebrow:hover{opacity:0.75;}
 @media (max-width:768px){
   .hero{
     background-attachment:scroll;
-    min-height:100svh;
-    justify-content:flex-start;
-    padding-top:calc(96px + env(safe-area-inset-top, 0px));
-    padding-bottom:calc(48px + env(safe-area-inset-bottom, 0px));
+    min-height:auto;
+    padding-top:calc(120px + env(safe-area-inset-top, 0px));
+    padding-bottom:calc(72px + env(safe-area-inset-bottom, 0px));
   }
 }
 .hero-grid-lines{
