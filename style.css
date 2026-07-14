@@ -288,8 +288,8 @@ a.eyebrow:hover{opacity:0.75;}
   .hero{
     background-attachment:scroll;
     min-height:auto;
-    padding-top:120px;
-    padding-bottom:72px;
+    padding-top:150px;
+    padding-bottom:110px;
   }
 }
 .hero-grid-lines{
@@ -379,7 +379,7 @@ section{position:relative;padding:clamp(40px,6vw,72px) 0;scroll-margin-top:80px;
 .lede-text{color:var(--ink-muted);font-size:1.05rem;max-width:52ch;margin-top:14px;}
 #pillars{background:var(--surface);color-scheme:light;}
 #shop{background:var(--surface);color-scheme:light;}
-#visit{background:var(--surface);color-scheme:light;}
+#visit{background:var(--surface);color-scheme:light;scroll-margin-top:40px;}
 
 
 /* ============ PRODUCT GRID ============ */
@@ -403,6 +403,8 @@ section{position:relative;padding:clamp(40px,6vw,72px) 0;scroll-margin-top:80px;
   scroll-margin-top:96px;
   box-shadow:0 8px 24px rgba(var(--ink-rgb),0.06);
   transition:transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease, outline-color 0.4s ease;
+  text-decoration:none;
+  color:inherit;
 }
 .card.jump-highlight{outline:2px solid var(--magenta);outline-offset:3px;}
 @media (hover:hover) and (pointer:fine){
@@ -411,6 +413,7 @@ section{position:relative;padding:clamp(40px,6vw,72px) 0;scroll-margin-top:80px;
     border-color:rgba(var(--magenta-light-rgb),0.5);
     box-shadow:0 20px 50px rgba(var(--magenta-light-rgb),0.18);
   }
+  .card:hover .btn-ghost-link{border-bottom-style:solid;}
 }
 .card-body{
   padding:24px 24px 22px;
