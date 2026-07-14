@@ -90,7 +90,6 @@
   <div class="wrap">
     <div class="section-head reveal">
       <h2>Why you need to visit us.</h2>
-      <div class="section-divider"></div>
       <p>Claw machines, rare collectibles, and parties worth talking about.</p>
     </div>
     <div class="pillars-grid">
@@ -232,58 +231,44 @@
       <p>Stop by, ring us up, or follow along online — here's everything you need.</p>
     </div>
     <div class="visit-grid">
-      <div class="reveal">
-        <div class="info-row">
-          <div class="icon-badge tint-pink"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21s7-7.5 7-12a7 7 0 1 0-14 0c0 4.5 7 12 7 12Z" stroke="var(--magenta-light)" stroke-width="1.6"/><circle cx="12" cy="9" r="2.4" stroke="var(--magenta-light)" stroke-width="1.6"/></svg></div>
-          <div>
-            <h4>Address</h4>
-            <p>629 S State St, Salt Lake City, UT 84111</p>
-          </div>
+      <div class="visit-card reveal">
+        <div class="visit-item">
+          <h4>Address</h4>
+          <p>629 S State St, Salt Lake City, UT 84111</p>
         </div>
-        <div class="info-row">
-          <div class="icon-badge tint-pink"><svg viewBox="0 0 24 24" fill="none"><path d="M6 3h3l2 5-2.5 1.5a11 11 0 0 0 5 5L15 12l5 2v3a2 2 0 0 1-2 2C10.5 19 5 13.5 5 6a2 2 0 0 1 1-3Z" stroke="var(--magenta-light)" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
-          <div>
-            <h4>Contact Us</h4>
-            <a class="btn-ghost-link" style="margin-top:8px;" href="tel:+13852966407">(385) 296-6407 →</a>
-          </div>
+        <div class="visit-item">
+          <h4>Contact</h4>
+          <a class="visit-link" href="tel:+13852966407">(385) 296-6407</a>
         </div>
-        <div class="info-row hours-row" id="hours" style="scroll-margin-top:96px;">
-          <div class="icon-badge tint-blue"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="var(--cyan)" stroke-width="1.6"/><path d="M12 7v5l3.5 2" stroke="var(--cyan)" stroke-width="1.6" stroke-linecap="round"/></svg></div>
-          <div>
-            <details class="hours-details">
-              <summary>Store Hours</summary>
-              <div class="hours-grid">
-                <div><span>Mon</span><span>4pm – 9pm</span></div>
-                <div><span>Tue</span><span>Closed</span></div>
-                <div><span>Wed</span><span>4pm – 9pm</span></div>
-                <div><span>Thu</span><span>4pm – 9pm</span></div>
-                <div><span>Fri</span><span>4pm – 12am</span></div>
-                <div><span>Sat</span><span>12pm – 12am</span></div>
-                <div><span>Sun</span><span>12pm – 9pm</span></div>
-              </div>
-            </details>
-          </div>
-        </div>
-        <div class="info-row">
-          <div class="icon-badge tint-gold"><svg viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h16M4 18h11" stroke="var(--gold)" stroke-width="1.6" stroke-linecap="round"/></svg></div>
-          <div>
-            <h4>Follow the Drops</h4>
-            <p>Follow along on social for new arrivals and restocks.</p>
-            <div class="social-row" style="margin-top:10px;">
-              <a href="https://www.instagram.com/clawzone.slc/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="var(--ink)" stroke-width="1.5"/><circle cx="12" cy="12" r="4" stroke="var(--ink)" stroke-width="1.5"/><circle cx="17.2" cy="6.8" r="1.1" fill="var(--ink)"/></svg></a>
-              <a href="https://www.yelp.com/biz/claw-zone-salt-lake-city" target="_blank" rel="noopener" aria-label="Yelp Reviews"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="var(--ink)" stroke-width="1.5"/><path d="M12 7l1.4 3.6 3.6.3-2.8 2.4.9 3.7L12 15l-3.1 2 .9-3.7-2.8-2.4 3.6-.3z" stroke="var(--ink)" stroke-width="1.3" stroke-linejoin="round"/></svg></a>
+        <div class="visit-item" id="hours" style="scroll-margin-top:96px;">
+          <details class="hours-details">
+            <summary>
+              <h4>Store Hours<span class="hours-chevron"></span></h4>
+              <p class="hours-preview" id="hoursPreview"></p>
+            </summary>
+            <div class="hours-grid">
+              <div data-day="mon"><span>Mon</span><span>4pm – 9pm</span></div>
+              <div data-day="tue"><span>Tue</span><span>Closed</span></div>
+              <div data-day="wed"><span>Wed</span><span>4pm – 9pm</span></div>
+              <div data-day="thu"><span>Thu</span><span>4pm – 9pm</span></div>
+              <div data-day="fri"><span>Fri</span><span>4pm – 12am</span></div>
+              <div data-day="sat"><span>Sat</span><span>12pm – 12am</span></div>
+              <div data-day="sun"><span>Sun</span><span>12pm – 9pm</span></div>
             </div>
-          </div>
+          </details>
+        </div>
+        <div class="visit-item">
+          <h4>Follow Along</h4>
+          <p>
+            <a class="visit-link" href="https://www.instagram.com/clawzone.slc/" target="_blank" rel="noopener">Instagram</a>
+            <span class="visit-sep">·</span>
+            <a class="visit-link" href="https://www.yelp.com/biz/claw-zone-salt-lake-city" target="_blank" rel="noopener">Yelp Reviews</a>
+          </p>
         </div>
       </div>
       <a class="map-card reveal" href="https://www.google.com/maps/search/?api=1&query=629+S+State+St%2C+Salt+Lake+City%2C+UT+84111" target="_blank" rel="noopener">
-        <div class="map-bg"></div>
-        <div class="map-pin">
-          <div class="pin-dot"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21s7-7.5 7-12a7 7 0 1 0-14 0c0 4.5 7 12 7 12Z" fill="white"/></svg></div>
-          <strong>Claw Zone SLC</strong>
-          <span>629 S State St, Salt Lake City</span>
-          <span class="btn-ghost-link">Get Directions →</span>
-        </div>
+        <img class="map-bg" src="assets/map.png" alt="Map showing Claw Zone SLC at 629 S State St, Salt Lake City">
+        <span class="map-cta btn-ghost-link">Get Directions →</span>
       </a>
     </div>
   </div>

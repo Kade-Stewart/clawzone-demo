@@ -54,4 +54,37 @@
     });
   }
 
+  var hoursPreview = document.getElementById('hoursPreview');
+  if(hoursPreview){
+    var dayKeys = ['sun','mon','tue','wed','thu','fri','sat'];
+    var schedule = {
+      sun:[12,21], mon:[16,21], tue:null, wed:[16,21],
+      thu:[16,21], fri:[16,24], sat:[12,24]
+    };
+    function fmtHour(h){
+      var h24 = h % 24;
+      var period = h24 < 12 ? 'am' : 'pm';
+      var h12 = h24 % 12 === 0 ? 12 : h24 % 12;
+      return h12 + period;
+    }
+    var now = new Date();
+    var todayKey = dayKeys[now.getDay()];
+    var today = schedule[todayKey];
+    var hour = now.getHours() + now.getMinutes() / 60;
+    var text;
+    if(!today){
+      text = 'Closed today';
+    } else if(hour < today[0]){
+      text = 'Opens today at ' + fmtHour(today[0]);
+    } else if(hour < today[1]){
+      text = 'Open now · Closes ' + fmtHour(today[1]);
+    } else {
+      text = 'Closed now';
+    }
+    hoursPreview.textContent = text;
+
+    var todayRow = document.querySelector('.hours-grid [data-day="' + todayKey + '"]');
+    if(todayRow) todayRow.classList.add('today');
+  }
+
 })();
