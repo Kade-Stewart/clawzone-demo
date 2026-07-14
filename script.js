@@ -87,4 +87,42 @@
     if(todayRow) todayRow.classList.add('today');
   }
 
+  var hoursDetails = document.querySelector('.hours-details');
+  if(hoursDetails){
+    var hoursSummary = hoursDetails.querySelector('summary');
+    var hoursPanel = hoursDetails.querySelector('.hours-panel');
+    if(hoursSummary && hoursPanel){
+      hoursSummary.addEventListener('click', function(e){
+        e.preventDefault();
+        if(hoursDetails.open){
+          hoursDetails.classList.remove('is-expanded');
+          var closeH = hoursPanel.scrollHeight;
+          hoursPanel.style.height = closeH + 'px';
+          hoursPanel.getBoundingClientRect();
+          hoursPanel.style.height = '0px';
+          var onClose = function(ev){
+            if(ev.propertyName !== 'height') return;
+            hoursDetails.removeAttribute('open');
+            hoursPanel.style.height = '';
+            hoursPanel.removeEventListener('transitionend', onClose);
+          };
+          hoursPanel.addEventListener('transitionend', onClose);
+        } else {
+          hoursDetails.setAttribute('open', '');
+          hoursDetails.classList.add('is-expanded');
+          var openH = hoursPanel.scrollHeight;
+          hoursPanel.style.height = '0px';
+          hoursPanel.getBoundingClientRect();
+          hoursPanel.style.height = openH + 'px';
+          var onOpen = function(ev){
+            if(ev.propertyName !== 'height') return;
+            hoursPanel.style.height = '';
+            hoursPanel.removeEventListener('transitionend', onOpen);
+          };
+          hoursPanel.addEventListener('transitionend', onOpen);
+        }
+      });
+    }
+  }
+
 })();
