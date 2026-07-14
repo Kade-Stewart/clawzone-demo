@@ -256,12 +256,15 @@ a.eyebrow:hover{opacity:0.75;}
     radial-gradient(55% 45% at 20% 15%, rgba(240,36,143,0.30), transparent 60%),
     radial-gradient(50% 40% at 85% 20%, rgba(10,169,194,0.24), transparent 60%),
     radial-gradient(75% 55% at 50% 100%, rgba(178,43,255,0.20), transparent 60%),
-    linear-gradient(180deg, rgba(10,6,20,0.68) 0%, rgba(10,6,20,0.88) 100%),
+    linear-gradient(180deg, rgba(10,6,20,0.45) 0%, rgba(10,6,20,0.72) 100%),
     url('assets/hero-photo.jpg');
   background-size:cover;
   background-position:center;
   background-repeat:no-repeat;
   background-attachment:fixed;
+}
+@media (max-width:768px){
+  .hero{background-attachment:scroll;}
 }
 .hero-grid-lines{
   position:absolute;inset:0;
@@ -287,6 +290,7 @@ a.eyebrow:hover{opacity:0.75;}
 .hero-eyebrow-row{display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;margin-bottom:22px;max-width:100%;}
 .hero-eyebrow-row > *{min-width:0;max-width:100%;}
 .hero-eyebrow-row .eyebrow{white-space:normal;text-align:center;}
+.trust-badge-row{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;}
 @media (max-width:480px){
   .hero-eyebrow-row{flex-direction:column;gap:10px;}
 }
@@ -695,8 +699,10 @@ footer{
       <p class="lede">Endless claw machines to play, Sonny Angels, Smiski, Pop Mart, and Pokemon collectibles to shop, and the whole arcade available to book for your next party.</p>
       <div class="hero-eyebrow-row">
         <a class="eyebrow" href="https://www.google.com/maps/search/?api=1&query=Claw+Zone+SLC+629+S+State+St+Salt+Lake+City+UT+84111" target="_blank" rel="noopener">629 S State St · Salt Lake City</a>
-        <a class="trust-badge" href="https://www.google.com/maps/search/?api=1&query=Claw+Zone+SLC+629+S+State+St+Salt+Lake+City+UT+84111" target="_blank" rel="noopener">See Us on Google</a>
-        <a class="trust-badge" href="https://www.yelp.com/biz/claw-zone-salt-lake-city" target="_blank" rel="noopener">Rate Us on Yelp</a>
+        <div class="trust-badge-row">
+          <a class="trust-badge" href="https://www.google.com/maps/search/?api=1&query=Claw+Zone+SLC+629+S+State+St+Salt+Lake+City+UT+84111" target="_blank" rel="noopener">See Us on Google</a>
+          <a class="trust-badge" href="https://www.yelp.com/biz/claw-zone-salt-lake-city" target="_blank" rel="noopener">Rate Us on Yelp</a>
+        </div>
       </div>
     </div>
   </div>
