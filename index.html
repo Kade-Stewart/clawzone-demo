@@ -271,11 +271,10 @@ a.eyebrow:hover{opacity:0.75;}
 .mobile-menu a:last-child{border-bottom:none;}
 @media (max-width:560px){
   .sticky-bar{grid-template-columns:auto 1fr auto;}
-  .sticky-bar .brand{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);}
-  .sticky-bar .brand span.full{display:none;}
+  .sticky-bar .brand{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-size:0.9rem;white-space:nowrap;}
   .sticky-bar .brand-logo{width:36px;height:36px;}
   .sticky-actions,.nav-icons{display:none;}
-  .menu-toggle{display:flex;}
+  .menu-toggle{display:flex;grid-column:3;justify-self:end;}
 }
 
 /* ============ HERO ============ */
