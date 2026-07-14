@@ -288,8 +288,8 @@ a.eyebrow:hover{opacity:0.75;}
   .hero{
     background-attachment:scroll;
     min-height:auto;
-    padding-top:180px;
-    padding-bottom:145px;
+    padding-top:150px;
+    padding-bottom:110px;
   }
 }
 .hero-grid-lines{
